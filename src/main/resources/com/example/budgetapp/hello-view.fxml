@@ -1,16 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.budgetapp.HelloController">
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.budgetapp.HelloController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
+   <HBox prefHeight="28.0" prefWidth="200.0">
+      <children>
+         <TextArea prefHeight="34.0" prefWidth="198.0" promptText="BudgetApp" text="Welcome to your Budgeting App!">
+            <cursor>
+               <Cursor fx:constant="NONE" />
+            </cursor>
+            <effect>
+               <Glow />
+            </effect>
+            <font>
+               <Font name="System Bold" size="11.0" />
+            </font>
+         </TextArea>
+      </children>
+   </HBox>
+   <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+     <tabs>
+       <Tab text="Income">
+         <content>
+               <VBox>
+                  <children>
+                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="218.0" prefWidth="195.0" />
+                  </children>
+               </VBox>
+         </content>
+       </Tab>
+       <Tab text="Expense">
+         <content>
+           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+         </content>
+       </Tab>
+         <Tab text="GraphView">
+           <content>
+             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+           </content>
+         </Tab>
+     </tabs>
+   </TabPane>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+    <Label fx:id="welcomeText" />
 </VBox>
